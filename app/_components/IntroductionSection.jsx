@@ -1,5 +1,5 @@
 const IntroductionSection = () => (
-    <section style={{ padding: '4rem 2rem', backgroundColor: '#ffffff', textAlign: 'center' }}>
+    <section>
         <h2>Introduction</h2>
         <p>
             Carbon emissions from coal mining are a significant challenge. Our app helps you quantify these emissions, explore effective reduction strategies, and move towards carbon neutrality.

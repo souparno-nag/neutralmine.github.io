@@ -8,17 +8,22 @@ import KeyFeaturesSection from "../_components/KeyFeaturesSection";
 import Navbar from "../_components/Navbar";
 
 
+
 export default function Home() {
   return (
-    <div>
-      <Navbar />
-      <HeroSection />
-      {/* <IntroductionSection />
+
+    <div className="flex flex-col justify-between h-screen ">
+      <div className="flex flex-col">
+
+        <HeroSection />
+        <IntroductionSection />
+      </div>
+      {/* 
       <KeyFeaturesSection />
       <ImpactSection />
       <HowItWorksSection />
-      <AboutSection />
-      <FooterSection /> */}
+      <AboutSection />*/}
+      <FooterSection />
     </div>
   );
 }

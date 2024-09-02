@@ -2,8 +2,16 @@
 
 import Image from 'next/image';
 import React from 'react'
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
+// import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+// import { Carousel } from 'react-responsive-carousel';
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+} from "@/components/ui/carousel"
+import Autoplay from "embla-carousel-autoplay"
 
 
 const heroImages = [
@@ -17,8 +25,8 @@ const heroImages = [
 
 const HeroSection = () => {
     return (
-        <div className="max-w-full h-[34vh] overflow-hidden rounded-b-xl">
-            <Carousel
+        <div className="max-w-full md:h-[400px] overflow-hidden rounded-b-xl ">
+            {/* <Carousel
                 showThumbs={false}
                 autoPlay
                 infiniteLoop
@@ -29,7 +37,27 @@ const HeroSection = () => {
                 {heroImages.map((img) => (
                     <Image src={img.imgUrl} alt={img.alt} key={img.alt} width={1920} height={1080} className="object-contain" />
                 ))}
+            </Carousel> */}
+            <Carousel opts={{
+                align: "start",
+                loop: true,
+            }}
+                plugins={[
+                    Autoplay({
+                        delay: 2000,
+                    }),
+                ]}
+            >
+                <CarouselContent>
+                    {heroImages.map((img) => (
+                        <CarouselItem> <Image src={img.imgUrl} alt={img.alt} key={img.alt} width={1920} height={1080} className="object-contain" /></CarouselItem>
+                    ))}
+
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
             </Carousel>
+
         </div>
     )
 }
