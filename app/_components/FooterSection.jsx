@@ -7,7 +7,7 @@ const FooterSection = () => (
             <a href="/privacy" style={{ color: '#fff', margin: '0.5rem' }}>Privacy Policy</a>
             <a href="/terms" style={{ color: '#fff', margin: '0.5rem' }}>Terms of Service</a>
         </div>
-        <p>&copy; {new Date().getFullYear()} Your Company Name. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} NeutralMINE. All rights reserved.</p>
         <div>
             {/* Social media links */}
             <a href="https://twitter.com" style={{ color: '#fff', margin: '0.5rem' }}>Twitter</a>

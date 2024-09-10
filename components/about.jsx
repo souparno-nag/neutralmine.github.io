@@ -5,10 +5,13 @@ import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 import { FiArrowRight, FiMail, FiMapPin } from "react-icons/fi";
 import { SiGithub, SiTiktok, SiX, SiYoutube } from "react-icons/si";
+import { useTheme } from 'next-themes'
+
 
 export const RevealBento = () => {
+    const { theme, setTheme } = useTheme();
     return (
-        <div className="min-h-screen bg-zinc-900 px-4 py-12 text-zinc-50">
+        <div className={`min-h-screen  px-4 py-12 text-zinc-50 ${theme == "dark" ? "bg-dark" : "bg-white"}`}>
             <Logo />
             <motion.div
                 initial="initial"
@@ -67,16 +70,16 @@ const HeaderBlock = () => (
             className="mb-4 size-14 rounded-full"
         />
         <h1 className="mb-12 text-4xl font-medium leading-tight">
-            Hi, I'm Tom.{" "}
+            Hi, We're team NeutralMINE.{" "}
             <span className="text-zinc-400">
-                I build cool websites like this one.
+                Our goal is to make the world a better place to live in.
             </span>
         </h1>
         <a
             href="#"
             className="flex items-center gap-1 text-red-300 hover:underline"
         >
-            Contact me <FiArrowRight />
+            Contact us <FiArrowRight />
         </a>
     </Block>
 );
@@ -145,11 +148,9 @@ const SocialsBlock = () => (
 const AboutBlock = () => (
     <Block className="col-span-12 text-3xl leading-snug">
         <p>
-            My passion is building cool stuff.{" "}
+            This app will be an open source project.{" "}
             <span className="text-zinc-400">
-                I build primarily with React, Tailwind CSS, and Framer Motion. I love
-                this stack so much that I even built a website about it. I've made over
-                a hundred videos on the subject across YouTube and TikTok.
+                We build primarily with Next, Tailwind CSS, and Framer Motion. We love to make something meaningful, something that matters.
             </span>
         </p>
     </Block>
@@ -158,13 +159,13 @@ const AboutBlock = () => (
 const LocationBlock = () => (
     <Block className="col-span-12 flex flex-col items-center gap-4 md:col-span-3">
         <FiMapPin className="text-3xl" />
-        <p className="text-center text-lg text-zinc-400">Cyberspace</p>
+        <p className="text-center text-lg text-zinc-400">VIT Chennai</p>
     </Block>
 );
 
 const EmailListBlock = () => (
     <Block className="col-span-12 md:col-span-9">
-        <p className="mb-3 text-lg">Join my mailing list</p>
+        <p className="mb-3 text-lg">Tell us about yourself</p>
         <form
             onSubmit={(e) => e.preventDefault()}
             className="flex items-center gap-2"
@@ -178,7 +179,7 @@ const EmailListBlock = () => (
                 type="submit"
                 className="flex items-center gap-2 whitespace-nowrap rounded bg-zinc-50 px-3 py-2 text-sm font-medium text-zinc-900 transition-colors hover:bg-zinc-300"
             >
-                <FiMail /> Join the list
+                <FiMail /> Drop a mail
             </button>
         </form>
     </Block>
@@ -213,7 +214,7 @@ const Footer = () => {
             <p className="text-center text-zinc-400">
                 Made with ❤️ by{" "}
                 <a href="#" className="text-red-300 hover:underline">
-                    @tomisloading
+                    @team NeutralMINE
                 </a>
             </p>
         </footer>
