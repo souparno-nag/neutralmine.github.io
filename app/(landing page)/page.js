@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 import AboutCoalManagementIndia from "@/components/Home";
 import AboutSection from "../_components/AboutSection";
 import FooterSection from "../_components/FooterSection";

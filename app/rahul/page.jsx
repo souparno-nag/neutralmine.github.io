@@ -11,8 +11,8 @@
 // export default Rahul
 
 // Ihatevit@100
-"use client "
-import React, { useState } from 'react';
+"use client"
+import React from 'react';
 
 const Rahul = () => {
     // Define the Power BI report base URL
